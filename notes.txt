@@ -1,0 +1,52 @@
+sub Init()
+    m.rowList = m.top.FindNode("rowList")
+    m.rowList.SetFocus(true)
+
+    https://github.com/rokudev/scenegraph-master-sample/blob/master/DetailsScreen/components/GridScreen/GridScreen.brs
+    https://github.com/rokudev/samples/blob/master/getting%20started/SceneGraphTutorial/components/eventsobservers/keyevents.xml
+    https://stackoverflow.com/questions/63663289/navigation-between-two-screens-roku-developer-brightscript?rq=1
+    https://github.com/rokudev/SceneGraphDeveloperExtensions
+
+
+    <script type="text/brightscript">
+  sub init()
+    myLabel.text = "I Love My Honey!!"
+    myLabel.horizAlign = "center"
+    myLabel.vertAlign = "center"
+    myLabel.width = 1280
+    myLabel.height = 720
+  end sub
+
+<script type="text/brightscript" >
+
+
+function GetContent()
+    url = CreateObject("roUrlTransfer")
+    url.SetUrl("https://api.jsonbin.io/b/5e7e4017862c46101abf301f")
+    url.SetCertificatesFile("common:/certs/ca-bundle.crt")
+    url.AddHeader("X-Roku-Reserved-Dev-Id", "")
+    'key: secret-key
+    'value: $2b$10$uFTmoV/NUudBt3K/t8h9H.c08SIwq29I9RiZskcr5k.tU8lvpwfJ2
+    url.AddHeader("Content-Type", "application/json")
+    url.AddHeader("secret-key", "$2b$10$uFTmoV/NUudBt3K/t8h9H.c08SIwq29I9RiZskcr5k.tU8lvpwfJ2")
+
+    url.InitClientCertificates()
+
+    
+ 
+    feed = url.GetToString()
+
+    json = ParseJson(feed)
+   'print json;
+   
+    return json
+
+
+    'this is for a sample, usually feed is retrieved from url using roUrlTransfer
+    'feed = ReadAsciiFile("pkg:/feed/feed.json")
+    'Sleep(2000) ' to emulate API call
+    'print feed
+    'json = ParseJson(feed)
+    'rootNodeArray = ParseJsonToNodeArray(json)
+    'm.top.content.Update(rootNodeArray)
+end function

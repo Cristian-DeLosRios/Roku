@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--********** Copyright 2020 Roku Corp.  All Rights Reserved. **********-->
+
+<component name="ContentTask" extends="Task">
+    <interface>
+        <field id="contentURI" type="string" />
+        <field id="contentAURI" type="uri" />
+        <field id="contentBURI" type="uri" />
+        <field id="contentBURI" type="intarray" />
+
+    </interface>
+
+    <script type="text/brightscript" uri="GetContent.brs" />
+
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<component name = "MainScene" extends = "Scene">
+   <script type="text/brightscript" uri="MainScene.brs" />
+   <script type="text/brightscript" uri="ContentTaskLogic.brs" />
+   <script type = "text/brightscript">
+   </script>
+   <children >
+
+      <Label id="s1Label" width="1280" height="720" horizAlign="center" vertAlign="top" translation="[0, 30]" />
+      <Poster id="s1Poster"
+      width = "512" 
+      height = "288" visible="true">
+      </Poster>
+      <Button id="Btn1" text="Go to Screen 2" 
+      height ="70" translation="[470, 450]" showFocusFootprint="true" />
+      <Button id="Btn2" text="test" 
+      height ="70" translation="[200, 300]" showFocusFootprint="true" />
+   </children>
+</component>
