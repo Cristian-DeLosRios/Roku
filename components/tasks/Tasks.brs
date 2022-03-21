@@ -7,7 +7,7 @@ sub RunContentTask()
 end sub
 
 
-sub AlternateScreen() 'should have been its own task to separate main thread from screen logic
+sub AlternateScreen() 'using screen stack library would have been better
 
     if m.secondScene = invalid then
         m.secondScene = CreateObject("roSGNode", "SecondScene")
@@ -27,8 +27,8 @@ sub AlternateScreen() 'should have been its own task to separate main thread fro
         m.s2Poster.URI = m.contentTask.contentBURI
 
         dataTextB = ""
+        'get first 5
         for i = 0 to 4
-            'convert the int to string
             dataTextB = dataTextB + m.contentTask.data[i].ToStr() + " "
         end for
 

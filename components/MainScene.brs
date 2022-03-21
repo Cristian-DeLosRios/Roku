@@ -19,12 +19,6 @@ sub Init()
     m.s1Poster.uri = m.contentTask.contentAURI
     m.s1Label.text = m.contentTask.contentATitle
 
-    'getContent from getContent.brs
-    'Set the font size
-    m.s1Label.font.size = 92
-    'Set the color to light blue
-    m.s1Label.color = "0x72D7EEFF"
-
     dataTextA = ""
     size = (m.contentTask.data).count()
 
