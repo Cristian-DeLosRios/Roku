@@ -3,10 +3,12 @@
 
 <component name="ContentTask" extends="Task">
     <interface>
-        <field id="contentURI" type="string" />
+
         <field id="contentAURI" type="uri" />
-        <field id="contentBURI" type="uri" />
-        <field id="contentBURI" type="intarray" />
+        <field id="contentATitle" type="string" />
+        <field id="contentBURI" type="string" />
+        <field id="contentBTitle" type="string" />
+        <field id="data" type="roArray" />
 
     </interface>
 

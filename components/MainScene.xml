@@ -4,7 +4,7 @@
 
 <component name = "MainScene" extends = "Scene">
    <script type="text/brightscript" uri="MainScene.brs" />
-   <script type="text/brightscript" uri="ContentTaskLogic.brs" />
+   <script type="text/brightscript" uri="tasks/Tasks.brs" />
    <script type = "text/brightscript">
    </script>
    <children >
@@ -14,9 +14,9 @@
       width = "512" 
       height = "288" visible="true">
       </Poster>
-      <Button id="Btn1" text="Go to Screen 2" 
+      <Button id="btn1" text="Go to Screen 2" 
       height ="70" translation="[470, 450]" showFocusFootprint="true" />
-      <Button id="Btn2" text="test" 
-      height ="70" translation="[200, 300]" showFocusFootprint="true" />
+
+      <Label id="s1Data"/>
    </children>
 </component>

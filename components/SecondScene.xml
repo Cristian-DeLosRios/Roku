@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<component name = "SecondScene" extends = "group">
+
+
+  <script type="text/brightscript" uri="SecondScene.brs" />
+  <script type = "text/brightscript">
+  </script>
+
+  <children >
+    <Label id="s2Label" width="1280" height="720" horizAlign="center" vertAlign="top" translation="[0, 30]" />
+    <Poster id="s2Poster"
+      width = "512" 
+      height = "288" visible="true">
+    </Poster>
+    <Button id="Btn2" text="Go to Screen 1" 
+      height ="70" translation="[470, 450]" showFocusFootprint="true" />
+    <Label id="s2Data"/>
+  </children>
+</component>
